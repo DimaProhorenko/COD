@@ -1,0 +1,26 @@
+@use '../abstracts/' as abs;
+
+.nav {
+    background-color: var(--header-nav-bg);
+    margin-block-start: .5em;
+    position: relative;
+    height: 0;
+    overflow: hidden;
+
+    transition: height abs.$td ease-in-out;
+
+    &__list {
+        padding: abs.toRem(10) abs.toRem(15);
+    }
+
+    li {
+        margin-block: .5em;
+    }
+
+    &__link {
+        display: inline-block;
+        padding: .3em .1em;
+        text-transform: uppercase;
+    }
+
+}

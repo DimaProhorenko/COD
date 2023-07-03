@@ -1,6 +1,7 @@
 :root {
   --bg-color: #000;
   --header-bg: rgba(73, 73, 73, 0.48);
+  --header-nav-bg: rgba(73, 73, 73, 0.52);
   --primary-color: green;
   --main-color: #fff;
   --main-color-inverted: #000;
@@ -205,12 +206,35 @@ button {
   border: 1px solid var(--main-color);
 }
 
+.nav {
+  background-color: var(--header-nav-bg);
+  margin-block-start: 0.5em;
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  transition: height 300ms ease-in-out;
+}
+.nav__list {
+  padding: 0.625rem 0.9375rem;
+}
+.nav li {
+  margin-block: 0.5em;
+}
+.nav__link {
+  display: inline-block;
+  padding: 0.3em 0.1em;
+  text-transform: uppercase;
+}
+
 .header {
   width: 100%;
   top: 30px;
   left: 0;
   position: fixed;
   z-index: 1000;
+}
+.header__container {
+  position: relative;
 }
 .header__mobile {
   position: relative;
