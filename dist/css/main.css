@@ -7,6 +7,22 @@
   --text-color: #fff;
 }
 
+@font-face {
+  font-family: "Hitmarker Regular";
+  src: url("../assets/fonts/hitmarker/HitmarkerText-Regular.woff2");
+}
+@font-face {
+  font-family: "Hitmarker Bold";
+  src: url("../assets/fonts/hitmarker/HitmarkerText-Bold.woff2");
+}
+@font-face {
+  font-family: "Hitmarker Italic";
+  src: url("../assets/fonts/hitmarker/HitmarkerText-Italic.woff2");
+}
+@font-face {
+  font-family: "Hitmarker VF";
+  src: url("../assets/fonts/hitmarker/Hitmarker-VF.woff2");
+}
 /* Box sizing rules */
 *,
 *::before,
@@ -34,6 +50,7 @@ body {
   line-height: 1.5;
   background-color: var(--bg-color);
   color: var(--text-color);
+  font-family: "Hitmarker Regular";
 }
 
 h1,
@@ -141,6 +158,7 @@ button {
 .btn--main {
   background-color: var(--main-color);
   color: var(--main-color-inverted);
+  font-weight: 600;
 }
 
 .header {
@@ -148,6 +166,7 @@ button {
   top: 30px;
   left: 0;
   position: fixed;
+  z-index: 1000;
 }
 .header__mobile {
   position: relative;
@@ -159,11 +178,53 @@ button {
   align-items: center;
   padding: 0.625rem 0.9375rem;
 }
-.header__wz-mobile {
-  width: 1.25rem;
+.header__left {
+  display: flex;
+  align-items: center;
+}
+.header__logo {
+  height: 16px;
+  width: 100%;
   display: inline-block;
   object-fit: contain;
 }
 .header__left {
   display: flex;
+}
+
+.hero {
+  min-height: 41.875rem;
+  position: relative;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #1b1b1b 0%, rgba(27, 27, 27, 0) 31.25%);
+}
+.hero__bg {
+  position: absolute;
+  inset: 0;
+  background: url("../assets/images/main/hero/hero-bg.jpg") no-repeat center/cover;
+  z-index: -1;
+}
+.hero__bg-texture {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: lighten;
+}
+.hero__fg {
+  position: absolute;
+  inset: 0;
+  background: url("../assets/images/main/hero/hero-person.png") no-repeat center/cover;
+}
+.hero__fg-texture {
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+  mix-blend-mode: lighten;
 }

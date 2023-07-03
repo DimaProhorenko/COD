@@ -3,7 +3,7 @@
 .header {
     width: 100%;
     @include abs.fixed(top 30px left 0);
-
+    z-index: 1000;
 
     &__mobile {
         position: relative;
@@ -18,8 +18,14 @@
         padding: abs.toRem(10) abs.toRem(15);
     }
 
-    &__wz-mobile {
-        width: abs.toRem(20);
+    &__left {
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo {
+        height: 16px;
+        width: 100%;
         display: inline-block;
         object-fit: contain;
     }
