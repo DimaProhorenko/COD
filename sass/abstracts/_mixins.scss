@@ -34,13 +34,13 @@ translate: -50% -50%;
 }
 
 @mixin for-phone {
-    @media screen and (max-width: v.$bp-phone) { @content; }
+    @media screen and (max-width: v.$screen-sm) { @content; }
 }
 
 @mixin for-tablet-up {
-    @media screen and (min-width: v.$bp-tablet) { @content; }
+    @media screen and (min-width: v.$screen-md) { @content; }
 }
 
 @mixin for-desktop-up {
-    @media screen and (min-width: v.$bp-desktop) { @content; }
+    @media screen and (min-width: v.$screen-lg) { @content; }
 }

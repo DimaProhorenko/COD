@@ -17,6 +17,20 @@
     margin-block-start: 1em;
 }
 
+.hide-mobile {
+    display: none !important;
+
+    @include abs.for-desktop-up {
+        display: block !important;
+    }
+}
+
+.hide-desktop {
+    @include abs.for-desktop-up {
+        display: none !important;
+    }
+}
+
 // Text
 .uppercase {
     text-transform: uppercase;
@@ -30,9 +44,21 @@
     font-variation-settings: 'wght' 900, 'wdth' 30;
     letter-spacing: 2px;
     margin-block-start: .15em;
+
+    @include abs.for-tablet-up {
+        font-size: abs.toRem(82);
+    }
+
+    @include abs.for-desktop-up {
+        font-size: abs.toRem(120);
+    }
 }
 
 .lead {
     font-size: abs.toRem(24);
     overflow-wrap: break-word;
+
+    @include abs.for-tablet-up {
+        font-size: abs.toRem(26);
+    }
 }

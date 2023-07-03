@@ -2,7 +2,12 @@
 
 .btn {
     display: inline-block;
-    padding: abs.toRem(5) abs.toRem(10);
+    padding: abs.toRem(5) abs.toRem(15);
+
+    @include abs.for-desktop-up {
+        padding-inline: abs.toRem(20);
+        letter-spacing: 1px;
+    }
 
     &--main {
         background-color: var(--main-color);

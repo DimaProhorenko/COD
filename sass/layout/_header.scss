@@ -18,7 +18,11 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: abs.toRem(10) abs.toRem(15);
+        padding: abs.toRem(15) abs.toRem(20);
+
+        @include abs.for-desktop-up {
+            padding-block: abs.toRem(10);
+        }
     }
 
     &__left {
@@ -28,12 +32,20 @@
 
     &__logo {
         height: 16px;
-        width: 100%;
+        width: auto;
+        max-width: 100%;
         display: inline-block;
         object-fit: contain;
+
+        @include abs.for-tablet-up {
+            height: abs.toRem(25);
+        }
     }
 
-    &__left {
-        display: flex;
+    &__right {
+        @include abs.for-desktop-up {
+            display: flex;
+            align-items: center;
+        }
     }
 }

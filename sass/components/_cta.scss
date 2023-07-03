@@ -1,0 +1,24 @@
+@use '../abstracts/' as abs;
+
+.cta {
+    background-color: var(--cta-bg);
+    padding: abs.toRem(10) abs.toRem(15);
+
+    &__link {
+        font-size: 1.2rem;
+        text-transform: uppercase;
+    }
+
+    &__separator {
+        margin-inline: 1rem;
+        display: inline-block;
+    }
+
+    &--desktop {
+        background-color: transparent;
+
+        .cta__link {
+            font-size: 1rem;
+        }
+    }
+}

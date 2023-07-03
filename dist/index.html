@@ -18,7 +18,7 @@
 					<div class="glass"></div>
 					<div class="header__top">
 						<div class="header__left">
-							<button class="burger">
+							<button class="burger hide-desktop">
 								<span
 									class="burger__line burger__line--top"
 								></span>
@@ -34,8 +34,37 @@
 								class="header__logo"
 								alt="warzone"
 							/>
+							<nav class="nav nav--desktop hide-mobile">
+								<ul class="nav__list">
+									<li>
+										<a href="#" class="nav__link">Games</a>
+									</li>
+									<li>
+										<a href="#" class="nav__link">News</a>
+									</li>
+									<li>
+										<a href="#" class="nav__link"
+											>Esports</a
+										>
+									</li>
+									<li>
+										<a href="#" class="nav__link"
+											>Support</a
+										>
+									</li>
+									<li>
+										<a href="#" class="nav__link">Shop</a>
+									</li>
+								</ul>
+							</nav>
 						</div>
+
 						<div class="header__right">
+							<div class="cta cta--desktop hide-mobile">
+								<a href="#" class="cta__link">Login</a>
+								<span class="cta__separator">|</span>
+								<a href="#" class="cta__link">Sign up</a>
+							</div>
 							<a
 								href="#"
 								class="btn btn--main btn--boom uppercase"
@@ -45,7 +74,7 @@
 						</div>
 					</div>
 				</div>
-				<nav class="nav header__nav">
+				<nav class="nav header__nav hide-desktop">
 					<div class="glass"></div>
 					<ul class="nav__list">
 						<li>
@@ -64,6 +93,11 @@
 							<a href="#" class="nav__link">shop</a>
 						</li>
 					</ul>
+					<div class="cta">
+						<a href="#" class="cta__link">Login</a>
+						<span class="cta__separator">|</span>
+						<a href="#" class="cta__link">Sign up</a>
+					</div>
 				</nav>
 			</div>
 		</header>

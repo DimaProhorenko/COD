@@ -6,6 +6,10 @@
     display: flex;
     align-items: flex-end;
 
+    @include abs.for-desktop-up {
+        min-height: abs.toRem(800);
+    }
+
     &::before {
         content: "";
         position: absolute;
@@ -53,6 +57,10 @@
         &-img {
             width: abs.toRem(60);
             object-fit: contain;
+
+            @include abs.for-tablet-up {
+                width: abs.toRem(70);
+            }
         }
 
         &::after {
