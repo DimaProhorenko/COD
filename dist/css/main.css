@@ -129,8 +129,27 @@ button {
   z-index: -1;
 }
 
+.flow > * + * {
+  margin-block-start: 1em;
+}
+
 .uppercase {
   text-transform: uppercase;
+}
+
+.title {
+  text-transform: uppercase;
+  font-size: 3.75rem;
+  font-family: "Hitmarker VF";
+  font-weight: 600;
+  font-variation-settings: "wght" 900, "wdth" 30;
+  letter-spacing: 2px;
+  margin-block-start: 0.15em;
+}
+
+.lead {
+  font-size: 1.5rem;
+  overflow-wrap: break-word;
 }
 
 .burger {
@@ -159,6 +178,10 @@ button {
   background-color: var(--main-color);
   color: var(--main-color-inverted);
   font-weight: 600;
+}
+.btn--border {
+  background-color: transparent;
+  border: 1px solid var(--main-color);
 }
 
 .header {
@@ -195,6 +218,8 @@ button {
 .hero {
   min-height: 41.875rem;
   position: relative;
+  display: flex;
+  align-items: flex-end;
 }
 .hero::before {
   content: "";
@@ -227,4 +252,26 @@ button {
   position: absolute;
   width: 100%;
   mix-blend-mode: lighten;
+}
+.hero__content {
+  position: relative;
+  margin-block-end: 3rem;
+  z-index: 3;
+}
+.hero__eyebrow {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.hero__eyebrow-img {
+  width: 3.75rem;
+  object-fit: contain;
+}
+.hero__eyebrow::after {
+  content: "";
+  width: 6.25rem;
+  display: inline-block;
+  height: 1px;
+  background-color: var(--main-color);
+  margin-inline-start: 1rem;
 }

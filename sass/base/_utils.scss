@@ -13,8 +13,26 @@
     z-index: -1;
 }
 
+.flow > * + * {
+    margin-block-start: 1em;
+}
 
 // Text
 .uppercase {
     text-transform: uppercase;
+}
+
+.title {
+    text-transform: uppercase;
+    font-size: abs.toRem(60);
+    font-family: abs.$secondary-font;
+    font-weight: 600;
+    font-variation-settings: 'wght' 900, 'wdth' 30;
+    letter-spacing: 2px;
+    margin-block-start: .15em;
+}
+
+.lead {
+    font-size: abs.toRem(24);
+    overflow-wrap: break-word;
 }

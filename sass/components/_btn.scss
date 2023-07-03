@@ -9,4 +9,9 @@
         color: var(--main-color-inverted);
         font-weight: 600;
     }
+
+    &--border  {
+        background-color: transparent;
+        border: 1px solid var(--main-color);
+    }
 }

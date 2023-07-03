@@ -3,6 +3,8 @@
 .hero {
     min-height: abs.toRem(670);
     position: relative;
+    display: flex;
+    align-items: flex-end;
 
     &::before {
         content: "";
@@ -34,6 +36,32 @@
             @include abs.absolute(bottom 0 right 0);
             width: 100%;
             mix-blend-mode: lighten;
+        }
+    }
+
+    &__content {
+        position: relative;
+        margin-block-end: 3rem;
+        z-index: 3;
+    }
+
+    &__eyebrow {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        &-img {
+            width: abs.toRem(60);
+            object-fit: contain;
+        }
+
+        &::after {
+            content: "";
+            width: abs.toRem(100);
+            display: inline-block;
+            height: 1px;
+            background-color: var(--main-color);
+            margin-inline-start: 1rem;
         }
     }
 }
