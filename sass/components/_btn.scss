@@ -19,4 +19,12 @@
         background-color: transparent;
         border: 1px solid var(--main-color);
     }
+
+    &--mobile-sm {
+        font-size: .8rem;
+
+        @include abs.for-tablet-up {
+            font-size: 1rem;
+        }
+    }
 }

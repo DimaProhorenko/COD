@@ -242,6 +242,14 @@ button {
   background-color: transparent;
   border: 1px solid var(--main-color);
 }
+.btn--mobile-sm {
+  font-size: 0.8rem;
+}
+@media screen and (min-width: 620px) {
+  .btn--mobile-sm {
+    font-size: 1rem;
+  }
+}
 
 .nav {
   background-color: var(--header-nav-bg);
@@ -292,6 +300,11 @@ button {
   margin-inline: 1rem;
   display: inline-block;
 }
+@media screen and (min-width: 1024px) {
+  .cta__separator {
+    margin-inline: 0.5rem;
+  }
+}
 .cta--desktop {
   background-color: transparent;
 }
@@ -317,7 +330,7 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.9375rem 1.25rem;
+  padding: 0.9375rem 0.9375rem;
 }
 @media screen and (min-width: 1024px) {
   .header__top {

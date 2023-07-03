@@ -18,7 +18,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: abs.toRem(15) abs.toRem(20);
+        padding: abs.toRem(15) abs.toRem(15);
 
         @include abs.for-desktop-up {
             padding-block: abs.toRem(10);

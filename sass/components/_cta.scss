@@ -12,6 +12,10 @@
     &__separator {
         margin-inline: 1rem;
         display: inline-block;
+
+        @include abs.for-desktop-up {
+            margin-inline: .5rem;
+        }
     }
 
     &--desktop {
