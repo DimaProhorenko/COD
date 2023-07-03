@@ -1,0 +1,20 @@
+@use '../abstracts/' as abs;
+.container {
+    width: 90%;
+    max-width: abs.$max-width;
+    margin-inline: auto;
+}
+
+.glass {
+    width: 100%;
+    height: 100%;
+    @include abs.absolute(top 0 left 0);
+    backdrop-filter: blur(22px);
+    z-index: -1;
+}
+
+
+// Text
+.uppercase {
+    text-transform: uppercase;
+}

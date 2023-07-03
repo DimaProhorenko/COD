@@ -1,0 +1,11 @@
+@use '../abstracts/' as abs;
+
+.btn {
+    display: inline-block;
+    padding: abs.toRem(5) abs.toRem(10);
+
+    &--main {
+        background-color: var(--main-color);
+        color: var(--main-color-inverted);
+    }
+}

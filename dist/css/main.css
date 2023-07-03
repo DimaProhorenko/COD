@@ -1,3 +1,169 @@
+:root {
+  --bg-color: #000;
+  --header-bg: rgba(73, 73, 73, 0.48);
+  --primary-color: green;
+  --main-color: #fff;
+  --main-color-inverted: #000;
+  --text-color: #fff;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
 body {
-  background-color: black;
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+a:not([class]):hover {
+  text-decoration: underline;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.container {
+  width: 90%;
+  max-width: 1220px;
+  margin-inline: auto;
+}
+
+.glass {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  backdrop-filter: blur(22px);
+  z-index: -1;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.burger {
+  display: block;
+  width: 25px;
+  height: 25px;
+  margin-inline-end: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+.burger__line {
+  width: 90%;
+  height: 2px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.3125rem 0.625rem;
+}
+.btn--main {
+  background-color: var(--main-color);
+  color: var(--main-color-inverted);
+}
+
+.header {
+  width: 100%;
+  top: 30px;
+  left: 0;
+  position: fixed;
+}
+.header__mobile {
+  position: relative;
+}
+.header__top {
+  background-color: var(--header-bg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.625rem 0.9375rem;
+}
+.header__wz-mobile {
+  width: 1.25rem;
+  display: inline-block;
+  object-fit: contain;
+}
+.header__left {
+  display: flex;
 }
