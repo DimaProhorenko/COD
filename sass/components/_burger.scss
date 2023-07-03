@@ -17,5 +17,40 @@
         height: abs.$burger-line-height;
         background-color: white;
         border-radius: 5px;
+        position: relative;
+        
+        &--mid {
+            transition: opacity abs.$td linear;
+        }
+
+        &--top,
+        &--bot {
+            transition: translate abs.$td ease-in-out abs.$td, rotate abs.$td ease-in-out;
+        }
+    }
+
+    &.open {
+        .burger__line {
+
+            &--mid {
+                opacity: 0;
+            }
+
+            &--top {
+                translate: 0 calc(4px + abs.$burger-line-height);
+                rotate: 45deg;
+            }
+
+            &--bot {
+                translate: 0 (-4px - abs.$burger-line-height);
+                rotate: -45deg;
+            }
+
+            &--top,
+            &--bot {
+                transition: translate abs.$td ease-in-out, rotate abs.$td ease-in-out abs.$td;
+            }
+            
+        }
     }
 }

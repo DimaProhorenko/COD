@@ -168,6 +168,27 @@ button {
   height: 2px;
   background-color: white;
   border-radius: 5px;
+  position: relative;
+}
+.burger__line--mid {
+  transition: opacity 300ms linear;
+}
+.burger__line--top, .burger__line--bot {
+  transition: translate 300ms ease-in-out 300ms, rotate 300ms ease-in-out;
+}
+.burger.open .burger__line--mid {
+  opacity: 0;
+}
+.burger.open .burger__line--top {
+  translate: 0 6px;
+  rotate: 45deg;
+}
+.burger.open .burger__line--bot {
+  translate: 0 -6px;
+  rotate: -45deg;
+}
+.burger.open .burger__line--top, .burger.open .burger__line--bot {
+  transition: translate 300ms ease-in-out, rotate 300ms ease-in-out 300ms;
 }
 
 .btn {
