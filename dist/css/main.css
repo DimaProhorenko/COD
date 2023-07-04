@@ -118,11 +118,11 @@ button {
   }
 }
 section:not(.hero) {
-  padding-block: 4rem;
+  padding-block-start: 4rem;
 }
 @media screen and (min-width: 620px) {
   section:not(.hero) {
-    padding-block: 6rem;
+    padding-block-start: 6rem;
   }
 }
 
@@ -210,7 +210,6 @@ section:not(.hero) {
 }
 
 .section__title {
-  line-height: 1;
   font-size: 2.5rem;
   font-family: "Hitmarker VF";
   font-variation-settings: "wght" 900, "wdth" 30;
@@ -218,6 +217,32 @@ section:not(.hero) {
   text-transform: uppercase;
   margin-block-end: 0.35em;
   margin-block-start: -5px;
+  padding-block-end: 8px;
+  position: relative;
+}
+@media screen and (min-width: 1024px) {
+  .section__title {
+    margin-block-end: 0.65em;
+  }
+}
+.section__title::before {
+  content: "";
+  width: 1rem;
+  height: 1px;
+  background-color: #898989;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+}
+.section__title::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(270deg, rgba(62, 62, 62, 0) 10.12%, #636262 100%);
+  display: block;
+  bottom: 0;
+  left: 1.2rem;
+  position: absolute;
 }
 
 .burger {
@@ -473,6 +498,7 @@ section:not(.hero) {
 }
 .header.hide {
   opacity: 0;
+  pointer-events: none;
 }
 .header__container {
   position: relative;
@@ -644,4 +670,50 @@ section:not(.hero) {
   .main-sidebar .sidebar {
     width: 35%;
   }
+}
+
+.game__content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+.game__entry {
+  width: 100%;
+  max-width: 20.3125rem;
+  height: 18.75rem;
+  position: relative;
+  overflow: hidden;
+}
+.game__entry:hover .game__bg {
+  scale: 1.1;
+}
+.game__entry:hover .game__logo {
+  translate: -50% -1rem;
+}
+@media screen and (min-width: 620px) {
+  .game__entry {
+    max-width: 35%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .game__entry {
+    max-width: auto;
+    flex: 1;
+  }
+}
+.game__bg {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transition: scale 300ms ease-in-out;
+}
+.game__logo {
+  bottom: 20px;
+  left: 50%;
+  position: absolute;
+  translate: -50% 0;
+  transition: translate 300ms ease-in-out;
 }
