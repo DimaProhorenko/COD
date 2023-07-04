@@ -3,12 +3,17 @@
 
 .main-sidebar {
 
+    .main {
+        margin-block-end: 4rem;
+    }
+
     @include abs.for-desktop-up {
         display: flex;
-        gap: 1rem;
+        gap: 2rem;
 
         .main {
             width: 65%;
+            margin-block-end: 0;
         }
         .sidebar {
             width: 35%;

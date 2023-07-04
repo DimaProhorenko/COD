@@ -14,6 +14,7 @@ section:not(.hero) {
     width: 90%;
     max-width: abs.$max-width;
     margin-inline: auto;
+    overflow: hidden;
 }
 
 
@@ -53,6 +54,11 @@ section:not(.hero) {
     }
 }
 
+.border-top {
+    border-top: 1px solid #444;
+    padding-block: 1rem;
+}
+
 // Text
 .uppercase {
     text-transform: uppercase;
@@ -83,4 +89,15 @@ section:not(.hero) {
     @include abs.for-tablet-up {
         font-size: abs.toRem(26);
     }
+}
+
+.section__title {
+    line-height: 1;
+    font-size: abs.toRem(40);
+    font-family: abs.$secondary-font;
+    font-variation-settings: 'wght' 900, 'wdth' 30;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-block-end: .35em;
+    margin-block-start: -5px;
 }

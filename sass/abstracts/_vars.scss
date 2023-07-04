@@ -13,10 +13,11 @@ $td: 300ms;
 
 
 :root {
-    --bg-color: #000;
+    --bg-color: #1b1b1b;
     --header-bg: rgba(73, 73, 73, 0.48);
     --header-nav-bg: rgba(73, 73, 73, 0.52);
     --cta-bg: rgba(73, 73, 73, .6);
+    --tag-bg: #92918A;
 
     --primary-color: green;
     --main-color: #fff;
@@ -24,4 +25,5 @@ $td: 300ms;
     
 
     --text-color: #fff;
+    --text-secondary: #92918A;
 }

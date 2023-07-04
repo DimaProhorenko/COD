@@ -1,0 +1,16 @@
+@use '../abstracts/' as abs;
+
+.tags {
+    display: flex;
+    gap: .5rem;
+}
+
+.tag {
+    display: inline-block;
+    padding: 4px;
+    background-color: var(--tag-bg);
+    font-size: .65rem;
+    text-transform: uppercase;
+    color: var(--main-color-inverted);
+    font-family: "Hitmarker Bold";
+}

@@ -1,12 +1,14 @@
 :root {
-  --bg-color: #000;
+  --bg-color: #1b1b1b;
   --header-bg: rgba(73, 73, 73, 0.48);
   --header-nav-bg: rgba(73, 73, 73, 0.52);
   --cta-bg: rgba(73, 73, 73, .6);
+  --tag-bg: #92918A;
   --primary-color: green;
   --main-color: #fff;
   --main-color-inverted: #000;
   --text-color: #fff;
+  --text-secondary: #92918A;
 }
 
 @font-face {
@@ -128,6 +130,7 @@ section:not(.hero) {
   width: 90%;
   max-width: 1220px;
   margin-inline: auto;
+  overflow: hidden;
 }
 
 .glass {
@@ -167,6 +170,11 @@ section:not(.hero) {
   }
 }
 
+.border-top {
+  border-top: 1px solid #444;
+  padding-block: 1rem;
+}
+
 .uppercase {
   text-transform: uppercase;
 }
@@ -199,6 +207,17 @@ section:not(.hero) {
   .lead {
     font-size: 1.625rem;
   }
+}
+
+.section__title {
+  line-height: 1;
+  font-size: 2.5rem;
+  font-family: "Hitmarker VF";
+  font-variation-settings: "wght" 900, "wdth" 30;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-block-end: 0.35em;
+  margin-block-start: -5px;
 }
 
 .burger {
@@ -355,6 +374,7 @@ section:not(.hero) {
   position: absolute;
   inset: 0;
   z-index: -1;
+  border: 1px solid #444;
 }
 .card__bg img {
   width: 100%;
@@ -372,7 +392,7 @@ section:not(.hero) {
 }
 .card__title {
   font-family: "Hitmarker VF";
-  font-size: 2.7rem;
+  font-size: 2.3rem;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-variation-settings: "wght" 900, "wdth" 30;
@@ -396,6 +416,43 @@ section:not(.hero) {
   font-weight: 600;
   display: inline-block;
   margin-inline-end: 0.5em;
+}
+
+.post__thumbnail {
+  margin-block-end: 1rem;
+  border: 1px solid #444;
+}
+.post__title {
+  font-size: 1.7rem;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-block-end: 0.4em;
+}
+.post__date {
+  color: var(--text-secondary);
+}
+.post--sm {
+  display: flex;
+}
+.post--sm .post__thumbnail {
+  height: 70px;
+  max-width: 30%;
+  margin-inline-end: 1rem;
+}
+
+.tags {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.tag {
+  display: inline-block;
+  padding: 4px;
+  background-color: var(--tag-bg);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  color: var(--main-color-inverted);
+  font-family: "Hitmarker Bold";
 }
 
 .header {
@@ -527,14 +584,46 @@ section:not(.hero) {
     flex-direction: row;
   }
 }
+.news__card:first-child {
+  margin-block-end: 1rem;
+}
+.news__card-thumbnail {
+  margin-block-end: 1rem;
+  border: 1px solid #444;
+}
+.news__card-title {
+  font-size: 1.7rem;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-block-end: 0.4em;
+}
+.news__card-date {
+  color: var(--text-secondary);
+}
+.news__card--sm .news__card-link {
+  display: flex;
+}
+.news__card--sm .news__card-thumbnail {
+  height: 70px;
+  max-width: 30%;
+  margin-inline-end: 1rem;
+  margin-block-end: 0;
+}
+.news__card--sm .news__card-title {
+  font-size: 1.2rem;
+}
 
+.main-sidebar .main {
+  margin-block-end: 4rem;
+}
 @media screen and (min-width: 1024px) {
   .main-sidebar {
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
   }
   .main-sidebar .main {
     width: 65%;
+    margin-block-end: 0;
   }
   .main-sidebar .sidebar {
     width: 35%;

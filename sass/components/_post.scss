@@ -1,0 +1,31 @@
+@use '../abstracts/' as abs;
+
+.post {
+
+    &__thumbnail {
+        margin-block-end: 1rem;
+        border: 1px solid #444;
+    }
+
+    &__title {
+        font-size: 1.7rem;
+        font-weight: 500;
+        line-height: 1.2;
+        margin-block-end: .4em;
+    }
+
+    &__date {
+        color: var(--text-secondary);
+    }
+
+
+    &--sm {
+        display: flex;
+
+        .post__thumbnail {
+            height: 70px;
+            max-width: 30%;
+            margin-inline-end: 1rem;
+        }
+    }
+}
