@@ -4,6 +4,11 @@
     width: 100%;
     @include abs.fixed(top 30px left 0);
     z-index: 1000;
+    transition: opacity abs.$td ease-in-out;
+
+    &.hide {
+        opacity: 0;
+    }
 
     &__container {
         position: relative;

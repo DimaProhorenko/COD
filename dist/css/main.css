@@ -461,6 +461,10 @@ section:not(.hero) {
   left: 0;
   position: fixed;
   z-index: 1000;
+  transition: opacity 300ms ease-in-out;
+}
+.header.hide {
+  opacity: 0;
 }
 .header__container {
   position: relative;
