@@ -1,0 +1,14 @@
+@use '../abstracts/' as abs;
+
+.news {
+
+    &__double {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        @include abs.for-tablet-up {
+            flex-direction: row;
+        }
+    }
+}

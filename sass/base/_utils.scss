@@ -1,9 +1,23 @@
 @use '../abstracts/' as abs;
+
+
+section:not(.hero) {
+    padding-block: 4rem;
+
+    @include abs.for-tablet-up {
+        padding-block: 6rem;
+    }
+}
+
+
 .container {
     width: 90%;
     max-width: abs.$max-width;
     margin-inline: auto;
 }
+
+
+
 
 .glass {
     width: 100%;
@@ -15,6 +29,14 @@
 
 .flow > * + * {
     margin-block-start: 1em;
+}
+
+.flow-sm > * + * {
+    margin-block-start: .5em;
+}
+
+.flow-lg > * + * {
+    margin-block-start: 2em;
 }
 
 .hide-mobile {

@@ -115,6 +115,15 @@ button {
     scroll-behavior: auto !important;
   }
 }
+section:not(.hero) {
+  padding-block: 4rem;
+}
+@media screen and (min-width: 620px) {
+  section:not(.hero) {
+    padding-block: 6rem;
+  }
+}
+
 .container {
   width: 90%;
   max-width: 1220px;
@@ -133,6 +142,14 @@ button {
 
 .flow > * + * {
   margin-block-start: 1em;
+}
+
+.flow-sm > * + * {
+  margin-block-start: 0.5em;
+}
+
+.flow-lg > * + * {
+  margin-block-start: 2em;
 }
 
 .hide-mobile {
@@ -312,6 +329,75 @@ button {
   font-size: 1rem;
 }
 
+.card {
+  width: 100%;
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  padding: 2rem;
+}
+.card::before {
+  content: "";
+  display: block;
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+.card--shadow-1::before {
+  background: linear-gradient(90deg, #131313 39.31%, rgba(19, 19, 19, 0) 66.17%);
+}
+.card--shadow-2::before {
+  background: linear-gradient(360deg, #131313 13.02%, rgba(19, 19, 19, 0) 56.77%);
+}
+.card__bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+.card__bg img {
+  width: 100%;
+  height: 100%;
+}
+.card__content {
+  position: relative;
+  z-index: 3;
+}
+.card__small {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-block-end: 0.5em;
+}
+.card__title {
+  font-family: "Hitmarker VF";
+  font-size: 2.7rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-variation-settings: "wght" 900, "wdth" 30;
+  margin-block-end: 0.25em;
+}
+.card__title--sm {
+  font-size: 1.8rem;
+}
+.card__subtitle {
+  font-size: 0.85rem;
+  opacity: 0.8;
+  margin-block-end: 1em;
+}
+.card__cta {
+  display: flex;
+  align-items: center;
+}
+.card__link {
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: inline-block;
+  margin-inline-end: 0.5em;
+}
+
 .header {
   width: 100%;
   top: 30px;
@@ -429,4 +515,28 @@ button {
   height: 1px;
   background-color: var(--main-color);
   margin-inline-start: 1rem;
+}
+
+.news__double {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+@media screen and (min-width: 620px) {
+  .news__double {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .main-sidebar {
+    display: flex;
+    gap: 1rem;
+  }
+  .main-sidebar .main {
+    width: 65%;
+  }
+  .main-sidebar .sidebar {
+    width: 35%;
+  }
 }

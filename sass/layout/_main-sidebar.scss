@@ -1,0 +1,17 @@
+@use '../abstracts/' as abs;
+
+
+.main-sidebar {
+
+    @include abs.for-desktop-up {
+        display: flex;
+        gap: 1rem;
+
+        .main {
+            width: 65%;
+        }
+        .sidebar {
+            width: 35%;
+        }
+    }
+}
