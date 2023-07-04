@@ -26,12 +26,18 @@
             font-weight: 500;
             line-height: 1.2;
             margin-block-end: .4em;
+            transition: color abs.$td linear;
         }
     
         &-date {
             color: var(--text-secondary);
         }
     
+        &:hover {
+            .news__card-title {
+                color: var(--primary-color);
+            }
+        }
     
         &--sm {
             .news__card-link {

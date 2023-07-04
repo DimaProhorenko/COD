@@ -4,7 +4,7 @@
   --header-nav-bg: rgba(73, 73, 73, 0.52);
   --cta-bg: rgba(73, 73, 73, .6);
   --tag-bg: #92918A;
-  --primary-color: green;
+  --primary-color: #0d9c12;
   --main-color: #fff;
   --main-color-inverted: #000;
   --text-color: #fff;
@@ -305,6 +305,10 @@ section:not(.hero) {
   display: inline-block;
   padding: 0.3em 0.1em;
   text-transform: uppercase;
+  transition: color 300ms linear;
+}
+.nav__link:hover {
+  color: var(--primary-color);
 }
 .nav--desktop {
   height: auto;
@@ -331,6 +335,10 @@ section:not(.hero) {
 .cta__link {
   font-size: 1.2rem;
   text-transform: uppercase;
+  transition: color 300ms linear;
+}
+.cta__link:hover {
+  color: var(--primary-color);
 }
 .cta__separator {
   margin-inline: 1rem;
@@ -600,9 +608,13 @@ section:not(.hero) {
   font-weight: 500;
   line-height: 1.2;
   margin-block-end: 0.4em;
+  transition: color 300ms linear;
 }
 .news__card-date {
   color: var(--text-secondary);
+}
+.news__card:hover .news__card-title {
+  color: var(--primary-color);
 }
 .news__card--sm .news__card-link {
   display: flex;

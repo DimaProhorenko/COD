@@ -7,6 +7,11 @@
     &__link {
         font-size: 1.2rem;
         text-transform: uppercase;
+        transition: color abs.$td linear;
+
+        &:hover {
+            color: var(--primary-color);
+        }
     }
 
     &__separator {
